@@ -4,7 +4,6 @@ const fs = require("fs");
 
 const client = new Discord.Client();
 const config = require("./config.js");
-const token = process.env.token
 client.config = config;
 client.queue = new Map()
 
@@ -30,4 +29,4 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-client.login(token);
+client.login(config.token);
